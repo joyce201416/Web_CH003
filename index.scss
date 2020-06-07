@@ -1,6 +1,7 @@
 @mixin desktop-box { 
     width: 1200px;
     margin: 0 auto;
+    transition: 0.3s;
 }
 
 * {
@@ -140,6 +141,45 @@ nav {
 
     #content {
         @include table-box();
+    }
+    
+}
+
+// 手機:小於等於767
+@media screen and (max-width:767px) {
+    
+    @mixin phone-box {
+        width: 100%;
+        transition: 0.3s;
+        
+    }
+
+    nav {
+        div {
+            @include phone-box();
+        }
+    }
+
+    #picture {
+        @include phone-box();
+        grid-template-columns :1fr ;
+
+        div {
+            height: 450px;
+        }
+
+
+        div:nth-child(2) {
+            background-image: url(./img/m-beach-1.png);
+        }
+
+        div:nth-child(3) {
+            background-image: url(./img/m-beach-2.png);
+        }
+    }
+
+    #content {
+        @include phone-box();
     }
     
 }

@@ -17,6 +17,8 @@ nav {
 nav div {
   width: 1200px;
   margin: 0 auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 nav div a {
@@ -42,6 +44,8 @@ nav div a:hover {
 #picture {
   width: 1200px;
   margin: 0 auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -77,6 +81,8 @@ nav div a:hover {
 #content {
   width: 1200px;
   margin: 0 auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -128,6 +134,35 @@ nav div a:hover {
   #content {
     width: 750px;
     margin: 0 auto;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav div {
+    width: 100%;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  #picture {
+    width: 100%;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #picture div {
+    height: 450px;
+  }
+  #picture div:nth-child(2) {
+    background-image: url(./img/m-beach-1.png);
+  }
+  #picture div:nth-child(3) {
+    background-image: url(./img/m-beach-2.png);
+  }
+  #content {
+    width: 100%;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
